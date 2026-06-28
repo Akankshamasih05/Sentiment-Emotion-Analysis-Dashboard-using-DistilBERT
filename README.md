@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Sentiment & Emotion Analysis Dashboard using DistilBERT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React-based web application that allows users to upload PDF documents and analyze their sentiment and emotional content using the DistilBERT NLP model.
+
+## Overview
+
+This project provides a clean frontend interface for PDF document ingestion, designed to connect with a DistilBERT-powered backend for real-time sentiment and emotion analysis. Users can upload any PDF, which is then processed and analyzed to extract emotional tone and sentiment scores.
+
+## Features
+
+- 📄 **PDF Upload Interface** — Simple file picker to upload PDF documents
+- 🔍 **Sentiment Analysis** — Detects positive, negative, or neutral sentiment using DistilBERT
+- 🎭 **Emotion Detection** — Identifies emotions (joy, sadness, anger, fear, surprise, etc.)
+- ⚡ **Fast Inference** — Powered by DistilBERT, a lightweight and efficient transformer model
+- 📊 **Result Display** — Shows analysis response directly in the UI
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Frontend | React 19, JavaScript |
+| HTTP Client | Axios |
+| NLP Model | DistilBERT (via backend API) |
+| Styling | CSS |
+| Build Tool | Create React App |
+
+## Project Structure
+
+```
+pdf-uploader/
+├── public/
+│   ├── index.html
+│   ├── manifest.json
+│   └── favicon.ico
+├── src/
+│   ├── App.js           # Root component
+│   ├── App.css          # App styles
+│   ├── PdfUploader.js   # PDF upload & API integration
+│   ├── index.js         # Entry point
+│   └── index.css        # Global styles
+├── package.json
+└── README.md
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js >= 14
+- npm or yarn
+- A running DistilBERT backend API (set your endpoint in `PdfUploader.js`)
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/Akankshamasih05/Sentiment-Emotion-Analysis-Dashboard-using-DistilBERT.git
+
+# Navigate into the project
+cd Sentiment-Emotion-Analysis-Dashboard-using-DistilBERT
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
+```
+
+The app will run at `http://localhost:3000`.
+
+### Backend Configuration
+
+In `src/PdfUploader.js`, replace the placeholder with your DistilBERT API endpoint:
+
+```js
+const response = await axios.post('YOUR_ENDPOINT_URL', formData, config);
+```
+
+## How It Works
+
+1. User selects a PDF file via the upload interface
+2. The file is sent as `multipart/form-data` to the DistilBERT backend
+3. The backend processes the text and returns sentiment/emotion predictions
+4. Results are displayed in the UI
 
 ## Available Scripts
 
-In the project directory, you can run:
+```bash
+npm start       # Run in development mode
+npm run build   # Build for production
+npm test        # Run tests
+```
 
-### `npm start`
+## Author
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Akankshamasih05**
