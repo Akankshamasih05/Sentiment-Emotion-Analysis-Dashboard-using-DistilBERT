@@ -8,11 +8,11 @@ This project provides a clean frontend interface for PDF document ingestion, des
 
 ## Features
 
-- 📄 **PDF Upload Interface** — Simple file picker to upload PDF documents
-- 🔍 **Sentiment Analysis** — Detects positive, negative, or neutral sentiment using DistilBERT
-- 🎭 **Emotion Detection** — Identifies emotions (joy, sadness, anger, fear, surprise, etc.)
-- ⚡ **Fast Inference** — Powered by DistilBERT, a lightweight and efficient transformer model
-- 📊 **Result Display** — Shows analysis response directly in the UI
+-  **PDF Upload Interface** — Simple file picker to upload PDF documents
+-  **Sentiment Analysis** — Detects positive, negative, or neutral sentiment using DistilBERT
+-  **Emotion Detection** — Identifies emotions (joy, sadness, anger, fear, surprise, etc.)
+-  **Fast Inference** — Powered by DistilBERT, a lightweight and efficient transformer model
+-  **Result Display** — Shows analysis response directly in the UI
 
 ## Tech Stack
 
